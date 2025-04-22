@@ -4,11 +4,17 @@
 class Cam {
 public:
     Cam();
+
+    //movement
     void applyView() const;
     void moveForward(float delta);
     void moveBackward(float delta);
     void moveLeft(float delta);
     void moveRight(float delta);
+
+    //drehung
+    void orbitLeft(float angleDelta);
+    void orbitRight(float angleDelta);
 
 private:
     float eyeX, eyeY, eyeZ;

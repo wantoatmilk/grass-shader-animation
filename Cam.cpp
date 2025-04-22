@@ -31,9 +31,13 @@ void Cam::applyView() const {
 }
 
 void Cam::moveForward(float delta) {
-    float dirX = centerX - eyeX;
-    float dirZ = centerZ - eyeZ;
+    float dirX = centerX - eyeX;    //x richtung
+    float dirZ = centerZ - eyeZ;    //z richtung
+
+    //länge berechnen (Norm, daher wurzel)
     float length = std::sqrt(dirX * dirX + dirZ * dirZ);
+
+    //vorlesung für formeln!!
     dirX /= length;
     dirZ /= length;
     eyeX += dirX * delta;
@@ -62,4 +66,21 @@ void Cam::moveLeft(float delta) {
 
 void Cam::moveRight(float delta) {
     moveLeft(-delta);
+}
+
+//drehung
+
+float orbitRadius = 5.0f;
+float orbitAngle = 0.0f;
+
+void Cam::orbitLeft(float delta) {
+    orbitAngle -= delta;
+    eyeX = centerX + orbitRadius * sin(orbitAngle);
+    eyeZ = centerZ + orbitRadius * cos(orbitAngle);
+}
+
+void Cam::orbitRight(float delta) {
+    orbitAngle += delta;
+    eyeX = centerX + orbitRadius * sin(orbitAngle);
+    eyeZ = centerZ + orbitRadius * cos(orbitAngle);
 }

@@ -53,6 +53,8 @@ void keyboard(unsigned char key, int x, int y) {
         case 's': cam.moveBackward(step); break;
         case 'a': cam.moveLeft(step); break;
         case 'd': cam.moveRight(step); break;
+        case 'q': cam.orbitLeft(0.1f); break;
+        case 'e': cam.orbitRight(0.1f); break;
         case 27: exit(0); // ESC zum Beenden
     }
 
