@@ -5,6 +5,10 @@ class Cam {
 public:
     Cam();
     void applyView() const;
+    void moveForward(float delta);
+    void moveBackward(float delta);
+    void moveLeft(float delta);
+    void moveRight(float delta);
 
 private:
     float eyeX, eyeY, eyeZ;

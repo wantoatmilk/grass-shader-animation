@@ -1,14 +1,18 @@
+#include <iostream>
 #include "Plane.h"
 #include "Cam.h"
 #include <GLUT/glut.h>
 
 Plane plane;
 
+Cam cam;
+
+void keyboard(unsigned char key, int x, int y); //init der tastatur
+
 void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glLoadIdentity();
-    Cam cam;
     cam.applyView();
 
     plane.draw();
@@ -36,6 +40,21 @@ int main(int argc, char** argv) {
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
+    glutKeyboardFunc(keyboard);
     glutMainLoop();
     return 0;
+}
+
+void keyboard(unsigned char key, int x, int y) {
+    float step = 0.2f;
+
+    switch (key) {
+        case 'w': cam.moveForward(step); break;
+        case 's': cam.moveBackward(step); break;
+        case 'a': cam.moveLeft(step); break;
+        case 'd': cam.moveRight(step); break;
+        case 27: exit(0); // ESC zum Beenden
+    }
+
+    glutPostRedisplay(); // Szene neu zeichnen
 }
