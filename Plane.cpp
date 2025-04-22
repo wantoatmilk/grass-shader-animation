@@ -16,7 +16,7 @@ void Plane::draw() const {
         //glColor3f(0.5f, 1.0f, 0.0f);       -> Hellgrün
         //glColor4f(1.0f, 0.0f, 0.0f, 0.5f); -> Halbtransparentes Rot
 
-        //zeichnungs start, (0, 0, 0) ist die plane mitte
+        //zeichnungs start, (0, 0, 0) ist die plane mitte insgesamt
         //       (-1,0,-1)------(1,0,-1)
         //           |             |
         //           |    Plane     |

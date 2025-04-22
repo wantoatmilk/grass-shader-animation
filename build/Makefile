@@ -129,6 +129,30 @@ grass/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/build
 .PHONY : grass/fast
 
+Cam.o: Cam.cpp.o
+.PHONY : Cam.o
+
+# target to build an object file
+Cam.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Cam.cpp.o
+.PHONY : Cam.cpp.o
+
+Cam.i: Cam.cpp.i
+.PHONY : Cam.i
+
+# target to preprocess a source file
+Cam.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Cam.cpp.i
+.PHONY : Cam.cpp.i
+
+Cam.s: Cam.cpp.s
+.PHONY : Cam.s
+
+# target to generate assembly for a file
+Cam.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Cam.cpp.s
+.PHONY : Cam.cpp.s
+
 Plane.o: Plane.cpp.o
 .PHONY : Plane.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... grass"
+	@echo "... Cam.o"
+	@echo "... Cam.i"
+	@echo "... Cam.s"
 	@echo "... Plane.o"
 	@echo "... Plane.i"
 	@echo "... Plane.s"

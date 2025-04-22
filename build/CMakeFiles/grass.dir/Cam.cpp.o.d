@@ -1,6 +1,5 @@
-CMakeFiles/grass.dir/main.cpp.o: \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/main.cpp \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Plane.h \
+CMakeFiles/grass.dir/Cam.cpp.o: \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.cpp \
   /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \

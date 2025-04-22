@@ -1,4 +1,5 @@
 #include "Plane.h"
+#include "Cam.h"
 #include <GLUT/glut.h>
 
 Plane plane;
@@ -7,9 +8,8 @@ void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glLoadIdentity();
-    gluLookAt(0.0, 2.0, 5.0,   // Kamera-Position
-              0.0, 0.0, 0.0,   // Blickpunkt
-              0.0, 1.0, 0.0);  // Up-Vektor
+    Cam cam;
+    cam.applyView();
 
     plane.draw();
 

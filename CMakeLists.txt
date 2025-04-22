@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(grass
     main.cpp
     Plane.cpp
+    Cam.cpp
 )
 
 # OpenGL & GLUT Frameworks für macOS

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/grass.dir/Cam.cpp.o"
+  "CMakeFiles/grass.dir/Cam.cpp.o.d"
   "CMakeFiles/grass.dir/Plane.cpp.o"
   "CMakeFiles/grass.dir/Plane.cpp.o.d"
   "CMakeFiles/grass.dir/main.cpp.o"
