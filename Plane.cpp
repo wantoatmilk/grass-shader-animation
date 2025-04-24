@@ -10,7 +10,7 @@ void Plane::draw() const {
     
     //2x2-Plane
     glBegin(GL_QUADS); 
-        glColor3f(0.2f, 0.8f, 0.2f); // farbe, hier grün
+        glColor3f(0.5f, 0.5f, 0.5f); // farbe, hier grau (R G B, Transparent bei 4 slots)
 
         //farbbeispiele:
         //glColor3f(0.5f, 1.0f, 0.0f);       -> Hellgrün
