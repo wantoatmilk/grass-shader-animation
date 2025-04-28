@@ -8,6 +8,7 @@ add_executable(grass
     main.cpp
     Plane.cpp
     Cam.cpp
+    Grass.cpp
 )
 
 # OpenGL & GLUT Frameworks für macOS

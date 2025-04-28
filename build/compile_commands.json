@@ -16,5 +16,11 @@
   "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Cam.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.cpp",
   "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.cpp",
   "output": "CMakeFiles/grass.dir/Cam.cpp.o"
+},
+{
+  "directory": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Grass.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Grass.cpp",
+  "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/Grass.cpp",
+  "output": "CMakeFiles/grass.dir/Grass.cpp.o"
 }
 ]

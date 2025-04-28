@@ -1071,8 +1071,11 @@ CMakeFiles/grass.dir/main.cpp.o: /Users/jacquelinekohnlein/Desktop/grass-shader-
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h \
   /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.h \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Grass.h \
   /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Plane.h
 
+
+/Users/jacquelinekohnlein/Desktop/grass-shader-animation/Grass.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/limits.h:
 

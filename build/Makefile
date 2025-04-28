@@ -153,6 +153,30 @@ Cam.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Cam.cpp.s
 .PHONY : Cam.cpp.s
 
+Grass.o: Grass.cpp.o
+.PHONY : Grass.o
+
+# target to build an object file
+Grass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Grass.cpp.o
+.PHONY : Grass.cpp.o
+
+Grass.i: Grass.cpp.i
+.PHONY : Grass.i
+
+# target to preprocess a source file
+Grass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Grass.cpp.i
+.PHONY : Grass.cpp.i
+
+Grass.s: Grass.cpp.s
+.PHONY : Grass.s
+
+# target to generate assembly for a file
+Grass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Grass.cpp.s
+.PHONY : Grass.cpp.s
+
 Plane.o: Plane.cpp.o
 .PHONY : Plane.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... Cam.o"
 	@echo "... Cam.i"
 	@echo "... Cam.s"
+	@echo "... Grass.o"
+	@echo "... Grass.i"
+	@echo "... Grass.s"
 	@echo "... Plane.o"
 	@echo "... Plane.i"
 	@echo "... Plane.s"

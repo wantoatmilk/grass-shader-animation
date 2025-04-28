@@ -1,11 +1,15 @@
+#define GL_SILENCE_DEPRECATION //deprication meldungen ausblenden
+
 #include <iostream>
 #include "Plane.h"
 #include "Cam.h"
+#include "Grass.h"
 #include <GLUT/glut.h>
 
 Plane plane;
 
 Cam cam;
+Grass grass;
 
 void keyboard(unsigned char key, int x, int y); //init der tastatur
 
@@ -16,6 +20,7 @@ void display() {
     cam.applyView();
 
     plane.draw();
+    grass.draw();
 
     glutSwapBuffers();
 }

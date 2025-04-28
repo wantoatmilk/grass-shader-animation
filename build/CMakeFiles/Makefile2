@@ -85,12 +85,12 @@ clean: CMakeFiles/grass.dir/clean
 CMakeFiles/grass.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build/CMakeFiles --progress-num=1,2,3,4 "Built target grass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target grass"
 .PHONY : CMakeFiles/grass.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/grass.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jacquelinekohnlein/Desktop/grass-shader-animation/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jacquelinekohnlein/Desktop/grass-shader-animation/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/grass.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jacquelinekohnlein/Desktop/grass-shader-animation/build/CMakeFiles 0
 .PHONY : CMakeFiles/grass.dir/rule
@@ -102,7 +102,7 @@ grass: CMakeFiles/grass.dir/rule
 # codegen rule for target.
 CMakeFiles/grass.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target grass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target grass"
 .PHONY : CMakeFiles/grass.dir/codegen
 
 # clean rule for target.
