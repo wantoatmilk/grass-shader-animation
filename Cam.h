@@ -15,11 +15,19 @@ public:
     //drehung
     void orbitLeft(float angleDelta);
     void orbitRight(float angleDelta);
+    void zoomIn(float delta);
+    void zoomOut(float delta);
+
+    float getFov() const { return fov; }  //getter für fov!
 
 private:
     float eyeX, eyeY, eyeZ;
     float centerX, centerY, centerZ;
     float upX, upY, upZ;
+
+    float orbitRadius;
+    float orbitAngle;
+    float fov; //field of view, fürs zoomen
 };
 
 #endif

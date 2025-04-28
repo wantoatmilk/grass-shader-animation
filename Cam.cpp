@@ -6,7 +6,9 @@
 Cam::Cam()
     : eyeX(0.0f), eyeY(2.0f), eyeZ(5.0f),
       centerX(0.0f), centerY(0.0f), centerZ(0.0f),
-      upX(0.0f), upY(1.0f), upZ(0.0f)
+      upX(0.0f), upY(1.0f), upZ(0.0f),
+      orbitRadius(5.0f), orbitAngle(0.0f),
+      fov(45.0f) //45 ist der normale blickwinkel
 {}
 
 //                y (hoch)
@@ -70,9 +72,6 @@ void Cam::moveRight(float delta) {
 
 //drehung
 
-float orbitRadius = 5.0f;
-float orbitAngle = 0.0f;
-
 void Cam::orbitLeft(float delta) {
     orbitAngle -= delta;
     eyeX = centerX + orbitRadius * sin(orbitAngle);
@@ -83,4 +82,15 @@ void Cam::orbitRight(float delta) {
     orbitAngle += delta;
     eyeX = centerX + orbitRadius * sin(orbitAngle);
     eyeZ = centerZ + orbitRadius * cos(orbitAngle);
+}
+
+
+void Cam::zoomIn(float delta) {
+    fov -= delta;
+    if (fov < 10.0f) fov = 10.0f; //ranzoomen, wie ein fernrohr, verhindert zu starkes zoomen, min ist 10
+}
+
+void Cam::zoomOut(float delta) {
+    fov += delta;
+    if (fov > 120.0f) fov = 120.0f; //rausgezoomt, verhindert zu starkes rauszoomen, max ist 120
 }

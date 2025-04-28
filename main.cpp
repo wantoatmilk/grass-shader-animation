@@ -25,7 +25,7 @@ void reshape(int w, int h) {
     
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(45.0, (double)w / h, 0.1, 100.0); // Perspektivische Projektion
+    gluPerspective(cam.getFov(), (double)w / h, 0.1, 100.0); // Perspektivische Projektion
 
     glMatrixMode(GL_MODELVIEW);
 }
@@ -55,8 +55,18 @@ void keyboard(unsigned char key, int x, int y) {
         case 'd': cam.moveRight(step); break;
         case 'q': cam.orbitLeft(0.1f); break;
         case 'e': cam.orbitRight(0.1f); break;
+        case '+':
+        case '=': cam.zoomIn(2.0f); break; //wegen tastaturlayout +
+        case '-':
+        case '_': cam.zoomOut(2.0f); break; //wegen tastaturlayout -
         case 27: exit(0); // ESC zum Beenden
     }
 
     glutPostRedisplay(); // Szene neu zeichnen
+
+    // Projektion neu laden, wichtig da die fov verändert wurde
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(cam.getFov(), 800.0/600.0, 0.1, 100.0);
+    glMatrixMode(GL_MODELVIEW);
 }
