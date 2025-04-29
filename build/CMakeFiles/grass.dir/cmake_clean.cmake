@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/grass.dir/Grass.cpp.o.d"
   "CMakeFiles/grass.dir/Plane.cpp.o"
   "CMakeFiles/grass.dir/Plane.cpp.o.d"
+  "CMakeFiles/grass.dir/ShaderLoader.cpp.o"
+  "CMakeFiles/grass.dir/ShaderLoader.cpp.o.d"
   "CMakeFiles/grass.dir/main.cpp.o"
   "CMakeFiles/grass.dir/main.cpp.o.d"
   "grass"

@@ -1,13 +1,23 @@
 #ifndef PLANE_H
 #define PLANE_H
+#include <GLUT/glut.h>
 
-class Plane {
+class Plane
+{
 public:
-    Plane(float size = 2.0f);
+    Plane();
+    ~Plane();
+
     void draw() const;
+    void setup();
 
 private:
-    float mitte;
+    GLuint vbo;
+    GLuint shaderProgram;
+    GLint aPosLocation;
+
+    void setupPlane();
+    void setupShader();
 };
 
 #endif

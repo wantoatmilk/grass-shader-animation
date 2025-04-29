@@ -201,6 +201,30 @@ Plane.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Plane.cpp.s
 .PHONY : Plane.cpp.s
 
+ShaderLoader.o: ShaderLoader.cpp.o
+.PHONY : ShaderLoader.o
+
+# target to build an object file
+ShaderLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/ShaderLoader.cpp.o
+.PHONY : ShaderLoader.cpp.o
+
+ShaderLoader.i: ShaderLoader.cpp.i
+.PHONY : ShaderLoader.i
+
+# target to preprocess a source file
+ShaderLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/ShaderLoader.cpp.i
+.PHONY : ShaderLoader.cpp.i
+
+ShaderLoader.s: ShaderLoader.cpp.s
+.PHONY : ShaderLoader.s
+
+# target to generate assembly for a file
+ShaderLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/ShaderLoader.cpp.s
+.PHONY : ShaderLoader.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -243,6 +267,9 @@ help:
 	@echo "... Plane.o"
 	@echo "... Plane.i"
 	@echo "... Plane.s"
+	@echo "... ShaderLoader.o"
+	@echo "... ShaderLoader.i"
+	@echo "... ShaderLoader.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

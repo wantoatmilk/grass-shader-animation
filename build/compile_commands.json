@@ -1,26 +1,32 @@
 [
 {
   "directory": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/main.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/main.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/main.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/main.cpp",
   "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/main.cpp",
   "output": "CMakeFiles/grass.dir/main.cpp.o"
 },
 {
   "directory": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Plane.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Plane.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Plane.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Plane.cpp",
   "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/Plane.cpp",
   "output": "CMakeFiles/grass.dir/Plane.cpp.o"
 },
 {
   "directory": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Cam.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Cam.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.cpp",
   "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.cpp",
   "output": "CMakeFiles/grass.dir/Cam.cpp.o"
 },
 {
   "directory": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Grass.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Grass.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Grass.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Grass.cpp",
   "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/Grass.cpp",
   "output": "CMakeFiles/grass.dir/Grass.cpp.o"
+},
+{
+  "directory": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/ShaderLoader.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/ShaderLoader.cpp",
+  "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/ShaderLoader.cpp",
+  "output": "CMakeFiles/grass.dir/ShaderLoader.cpp.o"
 }
 ]
