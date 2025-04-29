@@ -7,6 +7,7 @@
 #include <GLUT/glut.h>
 
 Plane plane;
+Grass grass;
 Cam cam;
 
 void keyboard(unsigned char key, int x, int y); // init der tastatur
@@ -16,9 +17,9 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glLoadIdentity();
-    // cam.applyView();  <-- NICHT mehr hier mit gluLookAt arbeiten!
 
     plane.draw(); // Plane zieht sich View/Projection-Matrix
+    grass.draw();
 
     glutSwapBuffers();
 }
@@ -45,6 +46,7 @@ int main(int argc, char **argv)
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f); // hintergrund
 
     plane.setup();
+    grass.setup();
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
