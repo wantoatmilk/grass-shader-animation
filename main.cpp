@@ -10,10 +10,26 @@ Plane plane;
 Grass grass;
 Cam cam;
 
+// framerate zaehler
+int frameCount = 0;
+float lastTime = 0.0f;
+
 void keyboard(unsigned char key, int x, int y); // init der tastatur
 
 void display()
 {
+    float currentTime = glutGet(GLUT_ELAPSED_TIME) / 1000.0f; // Sekunden
+    frameCount++;
+
+    if (currentTime - lastTime >= 1.0f) // alle 1 Sekunde
+    {
+        // std::cout << "FPS: " << frameCount << std::endl;
+        std::string title = "Grass Shader - FPS: " + std::to_string(frameCount);
+        glutSetWindowTitle(title.c_str());
+        frameCount = 0;
+        lastTime = currentTime;
+    }
+
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glLoadIdentity();
@@ -40,7 +56,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("Gras Shader");
+    glutCreateWindow("Grass Shader - FPS: ");
 
     glEnable(GL_DEPTH_TEST);
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f); // hintergrund
