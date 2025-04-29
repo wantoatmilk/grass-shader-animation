@@ -51,6 +51,7 @@ int main(int argc, char **argv)
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
+    glutIdleFunc(display); // wenn nix anderes zu tun, display neu laden!
 
     glutMainLoop();
 }

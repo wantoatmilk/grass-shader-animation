@@ -72,6 +72,12 @@ void Grass::draw() const
     glEnableVertexAttribArray(aPosLocation);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glVertexAttribPointer(aPosLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
+    // für die schwinungen
+    GLuint timeLoc = glGetUniformLocation(shaderProgram, "time");
+    float t = glutGet(GLUT_ELAPSED_TIME) / 1000.0f; // Zeit in Sekunden
+    glUniform1f(timeLoc, t);
+
     glDrawArrays(GL_TRIANGLES, 0, vertexCount);
     glDisableVertexAttribArray(aPosLocation);
 
