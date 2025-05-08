@@ -11,6 +11,7 @@ public:
     void draw() const;
     void setup();
     float getSize() const;
+    float getHeightAt(float x, float z) const;
 
 private:
     GLuint vbo;

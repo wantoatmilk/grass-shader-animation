@@ -1,5 +1,7 @@
+#define GL_SILENCE_DEPRECATION
 #include "Grass.h"
 #include "Cam.h"
+#include "Plane.h"
 #include "ShaderLoader.h"
 #include <GLUT/glut.h>
 
@@ -12,6 +14,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 extern Cam cam;
+extern Plane plane; // zugriff auf den "boden"
 
 Grass::Grass() : vbo(0), shaderProgram(0), aPosLocation(-1) {}
 
@@ -54,6 +57,28 @@ void Grass::setup()
     shaderProgram = LoadShaders("../shader/grass.vert", "../shader/grass.frag");
     aPosLocation = glGetAttribLocation(shaderProgram, "aPos");
     vertexCount = vertices.size() / 3;
+
+    float planeSize = plane.getSize();
+    int numHalme = 40;
+    float spacing = planeSize / numHalme;
+
+    for (int i = 0; i < numHalme; ++i)
+    {
+        for (int j = 0; j < numHalme; ++j)
+        {
+            float x = -planeSize / 2 + i * spacing;
+            float z = -planeSize / 2 + j * spacing;
+            float y = plane.getHeightAt(x, z);
+
+            GrassInstance instance;
+            instance.position = glm::vec3(x, y, z);
+            instance.scaleHeight = 0.8f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.8f)));
+            instance.scaleWidth = 0.8f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.8f)));
+            instance.rotationAngle = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX)) * glm::radians(360.0f);
+
+            instances.push_back(instance);
+        }
+    }
 }
 
 void Grass::draw() const
@@ -76,15 +101,15 @@ void Grass::draw() const
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glVertexAttribPointer(aPosLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
-    for (int x = -1; x <= 1; ++x)
+    for (const GrassInstance &instance : instances)
     {
-        for (int z = -1; z <= 1; ++z)
-        {
-            glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(x, 0.0f, z));
-            glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::translate(model, instance.position);
+        model = glm::rotate(model, instance.rotationAngle, glm::vec3(0.0f, 1.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(instance.scaleWidth, instance.scaleHeight, instance.scaleWidth));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 
-            glDrawArrays(GL_TRIANGLES, 0, vertexCount);
-        }
+        glDrawArrays(GL_TRIANGLES, 0, vertexCount);
     }
 
     // für die schwingungen
@@ -92,7 +117,6 @@ void Grass::draw() const
     float t = glutGet(GLUT_ELAPSED_TIME) / 1000.0f; // Zeit in Sekunden
     glUniform1f(timeLoc, t);
 
-    glDrawArrays(GL_TRIANGLES, 0, vertexCount);
     glDisableVertexAttribArray(aPosLocation);
 
     glUseProgram(0);

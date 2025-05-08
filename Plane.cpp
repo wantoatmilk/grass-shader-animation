@@ -48,6 +48,11 @@ float Plane::getSize() const
     return mitte * 2.0f;
 }
 
+float Plane::getHeightAt(float x, float z) const
+{
+    return terrainNoise(x, z);
+}
+
 void Plane::setupPlane()
 {
 
