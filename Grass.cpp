@@ -3,6 +3,9 @@
 #include "ShaderLoader.h"
 #include <GLUT/glut.h>
 
+#include <iostream>
+#include "PerlinNoise.hpp"
+
 #include <vector>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -72,6 +75,17 @@ void Grass::draw() const
     glEnableVertexAttribArray(aPosLocation);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glVertexAttribPointer(aPosLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
+    for (int x = -1; x <= 1; ++x)
+    {
+        for (int z = -1; z <= 1; ++z)
+        {
+            glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(x, 0.0f, z));
+            glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+            glDrawArrays(GL_TRIANGLES, 0, vertexCount);
+        }
+    }
 
     // für die schwingungen
     GLuint timeLoc = glGetUniformLocation(shaderProgram, "time");

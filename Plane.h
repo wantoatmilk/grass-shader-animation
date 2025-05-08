@@ -10,14 +10,19 @@ public:
 
     void draw() const;
     void setup();
+    float getSize() const;
 
 private:
     GLuint vbo;
+    GLuint ibo; // Index Buffer Object
     GLuint shaderProgram;
     GLint aPosLocation;
 
     void setupPlane();
     void setupShader();
+    float mitte;
+    int vertexCount;
+    int indexCount; // Anzahl der Indices
 };
 
 #endif
