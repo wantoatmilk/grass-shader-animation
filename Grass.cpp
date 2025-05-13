@@ -74,6 +74,7 @@ void Grass::setup()
             instance.scaleHeight = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
             instance.scaleWidth = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
             instance.rotationAngle = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX)) * glm::radians(360.0f);
+            instance.colorSeed = static_cast<float>(rand()) / RAND_MAX;
 
             instances.push_back(instance);
         }
@@ -101,10 +102,12 @@ void Grass::draw() const
     glVertexAttribPointer(aPosLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
     GLuint instancePosLoc = glGetUniformLocation(shaderProgram, "instancePos");
+    GLuint colorSeedLoc = glGetUniformLocation(shaderProgram, "instanceColorSeed");
 
     for (const GrassInstance &instance : instances)
     {
         glUniform3fv(instancePosLoc, 1, glm::value_ptr(instance.position));
+        glUniform1f(colorSeedLoc, instance.colorSeed);
 
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model, instance.position);

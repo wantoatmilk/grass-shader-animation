@@ -10,6 +10,7 @@ struct GrassInstance
     float scaleHeight;
     float scaleWidth;
     float rotationAngle;
+    float colorSeed;
 };
 
 class Grass
