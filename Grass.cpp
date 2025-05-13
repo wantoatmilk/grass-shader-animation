@@ -59,7 +59,7 @@ void Grass::setup()
     vertexCount = vertices.size() / 3;
 
     float planeSize = plane.getSize();
-    int numHalme = 40;
+    int numHalme = 60;
     float spacing = planeSize / numHalme;
 
     for (int i = 0; i < numHalme; ++i)
@@ -101,8 +101,12 @@ void Grass::draw() const
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glVertexAttribPointer(aPosLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
+    GLuint instancePosLoc = glGetUniformLocation(shaderProgram, "instancePos");
+
     for (const GrassInstance &instance : instances)
     {
+        glUniform3fv(instancePosLoc, 1, glm::value_ptr(instance.position));
+
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model, instance.position);
         model = glm::rotate(model, instance.rotationAngle, glm::vec3(0.0f, 1.0f, 0.0f));
