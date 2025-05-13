@@ -59,21 +59,20 @@ void Grass::setup()
     vertexCount = vertices.size() / 3;
 
     float planeSize = plane.getSize();
-    int numHalme = 60;
-    float spacing = planeSize / numHalme;
+    int numHalme = 60; // halmanzahl!
 
     for (int i = 0; i < numHalme; ++i)
     {
         for (int j = 0; j < numHalme; ++j)
         {
-            float x = -planeSize / 2 + i * spacing;
-            float z = -planeSize / 2 + j * spacing;
+            float x = static_cast<float>(rand()) / RAND_MAX * planeSize - planeSize / 2.0f;
+            float z = static_cast<float>(rand()) / RAND_MAX * planeSize - planeSize / 2.0f;
             float y = plane.getHeightAt(x, z);
 
             GrassInstance instance;
             instance.position = glm::vec3(x, y, z);
-            instance.scaleHeight = 0.8f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.8f)));
-            instance.scaleWidth = 0.8f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.8f)));
+            instance.scaleHeight = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
+            instance.scaleWidth = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
             instance.rotationAngle = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX)) * glm::radians(360.0f);
 
             instances.push_back(instance);
