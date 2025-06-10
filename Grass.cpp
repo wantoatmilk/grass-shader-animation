@@ -59,7 +59,7 @@ void Grass::setup()
     vertexCount = vertices.size() / 3;
 
     float planeSize = plane.getSize();
-    int numHalme = 60; // halmanzahl!
+    int numHalme = 100; // halmanzahl!
 
     for (int i = 0; i < numHalme; ++i)
     {
@@ -70,7 +70,7 @@ void Grass::setup()
             float y = plane.getHeightAt(x, z);
 
             GrassInstance instance;
-            instance.position = glm::vec3(x, y, z);
+            instance.position = glm::vec3(x, y, z); // globale pos
             instance.scaleHeight = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
             instance.scaleWidth = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
             instance.rotationAngle = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX)) * glm::radians(360.0f);

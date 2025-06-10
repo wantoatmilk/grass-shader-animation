@@ -6,7 +6,7 @@ uniform mat4 model; //model: lokale Transformation (z. B. Halm drehen, skalier
 uniform mat4 view; //view: Kamera-Ansicht (wo die Kamera steht und hinschaut)
 uniform mat4 projection; //projection: Perspektive (wie du den 3D-Raum auf 2D abbildest)
 uniform float time; //zeit fürs animieren
-uniform vec3 instancePos;
+uniform vec3 instancePos; // globale pos für instanzen
 
 vec2 hash(vec2 p) {
     p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5,183.3)));
@@ -39,7 +39,7 @@ void main()
     // Windbeugung proportional zur Höhe (local y) und Windböe
     float sway = 0.0;
     if (aPos.y > 0.01) {
-        sway = baseNoise * gust * (aPos.y * (0.6 + aPos.y * 0.8));
+        sway = baseNoise * gust * (aPos.y * (0.6 + aPos.y * 0.8)); //0.8 für normal, höher für starker wind
     }
 
     /*

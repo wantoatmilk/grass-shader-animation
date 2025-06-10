@@ -26,19 +26,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 10,
+				"line" : 15,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 19,
+				"line" : 26,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 7,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 11,
 				"parent" : 0
 			}
 		]
@@ -52,10 +58,17 @@
 					"fragment" : "-g -std=gnu++17 -arch arm64"
 				}
 			],
-			"includes" : 
+			"frameworks" : 
 			[
 				{
 					"backtrace" : 3,
+					"path" : "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
 					"path" : "/opt/homebrew/include"
 				}
 			],
@@ -74,7 +87,9 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6
 			]
 		}
 	],
@@ -86,6 +101,16 @@
 			{
 				"fragment" : "-g",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/opt/homebrew/lib/libGLEW.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/opt/homebrew/lib/libassimp.dylib",
+				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
@@ -117,7 +142,9 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6
 			]
 		}
 	],
@@ -151,6 +178,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "ShaderLoader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ModelLoader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Model.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -177,6 +177,54 @@ Grass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Grass.cpp.s
 .PHONY : Grass.cpp.s
 
+Model.o: Model.cpp.o
+.PHONY : Model.o
+
+# target to build an object file
+Model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Model.cpp.o
+.PHONY : Model.cpp.o
+
+Model.i: Model.cpp.i
+.PHONY : Model.i
+
+# target to preprocess a source file
+Model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Model.cpp.i
+.PHONY : Model.cpp.i
+
+Model.s: Model.cpp.s
+.PHONY : Model.s
+
+# target to generate assembly for a file
+Model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Model.cpp.s
+.PHONY : Model.cpp.s
+
+ModelLoader.o: ModelLoader.cpp.o
+.PHONY : ModelLoader.o
+
+# target to build an object file
+ModelLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/ModelLoader.cpp.o
+.PHONY : ModelLoader.cpp.o
+
+ModelLoader.i: ModelLoader.cpp.i
+.PHONY : ModelLoader.i
+
+# target to preprocess a source file
+ModelLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/ModelLoader.cpp.i
+.PHONY : ModelLoader.cpp.i
+
+ModelLoader.s: ModelLoader.cpp.s
+.PHONY : ModelLoader.s
+
+# target to generate assembly for a file
+ModelLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/ModelLoader.cpp.s
+.PHONY : ModelLoader.cpp.s
+
 Plane.o: Plane.cpp.o
 .PHONY : Plane.o
 
@@ -264,6 +312,12 @@ help:
 	@echo "... Grass.o"
 	@echo "... Grass.i"
 	@echo "... Grass.s"
+	@echo "... Model.o"
+	@echo "... Model.i"
+	@echo "... Model.s"
+	@echo "... ModelLoader.o"
+	@echo "... ModelLoader.i"
+	@echo "... ModelLoader.s"
 	@echo "... Plane.o"
 	@echo "... Plane.i"
 	@echo "... Plane.s"
