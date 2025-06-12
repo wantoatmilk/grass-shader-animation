@@ -39,8 +39,7 @@ void Model::setupModel()
 {
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, loader.vertices.size() * sizeof(float), loader.vertices.data(), GL_STATIC_DRAW);
-
+    glBufferData(GL_ARRAY_BUFFER, loader.vertices.size() * sizeof(glm::vec3), loader.vertices.data(), GL_STATIC_DRAW);
     glGenBuffers(1, &ibo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, loader.indices.size() * sizeof(unsigned int), loader.indices.data(), GL_STATIC_DRAW);
@@ -90,8 +89,8 @@ void Model::draw() const
 
     // Model-Matrix wo bist duuuuuu :(
     glm::mat4 modelMatrix = glm::mat4(1.0f);
-    modelMatrix = glm::translate(modelMatrix, glm::vec3(12.0f, 0.0f, 0.0f));
-    modelMatrix = glm::scale(modelMatrix, glm::vec3(0.2f));
+    modelMatrix = glm::translate(modelMatrix, glm::vec3(0.5f, -1.0f, 0.0f));
+    modelMatrix = glm::scale(modelMatrix, glm::vec3(14.0f));
     glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(modelMatrix));
 
     // View-Matrix von der Kamera holen

@@ -9,7 +9,7 @@
 
 #include "Model.h"
 
-// Model bunny;
+Model bunny;
 Plane plane;
 Grass grass;
 Cam cam;
@@ -41,8 +41,7 @@ void display()
     plane.draw(); // Plane zieht sich View/Projection-Matrix
     grass.draw();
 
-    //  bunny
-    // bunny.draw();
+    bunny.draw();
 
     glutSwapBuffers();
 }
@@ -102,7 +101,7 @@ int main(int argc, char **argv)
     grass.setup();
 
     // bunny laden
-    // bunny.setup();
+    bunny.setup();
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
