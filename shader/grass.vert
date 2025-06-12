@@ -8,6 +8,8 @@ uniform mat4 projection; //projection: Perspektive (wie du den 3D-Raum auf 2D ab
 uniform float time; //zeit fürs animieren
 uniform vec3 instancePos; // globale pos für instanzen
 
+varying float vHeight; // Höhe des Halmpunktes für Farbe im Fragment-Shader
+
 vec2 hash(vec2 p) {
     p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5,183.3)));
     return -1.0 + 2.0 * fract(sin(p) * 43758.5453123);
@@ -28,6 +30,8 @@ float perlinNoise(vec2 p) {
 void main()
 {
     vec3 worldPos = instancePos + aPos;
+
+    vHeight = aPos.y; //y pos für gradient
 
     // Erzeuge Perlin-basiertes Grundrauschen auf Weltposition
     vec2 windSample = vec2(worldPos.z * 0.15 + time * 0.4, worldPos.x * 0.15 + time * 0.25);
