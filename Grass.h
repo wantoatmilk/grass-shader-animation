@@ -27,6 +27,9 @@ private:
     GLint aPosLocation;
     int vertexCount;
     std::vector<GrassInstance> instances;
+
+    GLuint vboNormals;
+    GLint aNormalLocation;
 };
 
 #endif

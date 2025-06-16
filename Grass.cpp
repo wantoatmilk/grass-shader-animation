@@ -16,7 +16,7 @@
 extern Cam cam;
 extern Plane plane; // zugriff auf den "boden"
 
-Grass::Grass() : vbo(0), shaderProgram(0), aPosLocation(-1) {}
+Grass::Grass() : vbo(0), vboNormals(0), shaderProgram(0), aPosLocation(-1), aNormalLocation(-1) {}
 
 void Grass::setup()
 {
@@ -27,6 +27,7 @@ void Grass::setup()
     float bendFactor = 0.02f;
 
     std::vector<float> vertices;
+    std::vector<float> normals;
 
     for (int i = 0; i < segments; ++i)
     {
@@ -48,14 +49,36 @@ void Grass::setup()
         vertices.insert(vertices.end(), {xLeft0, y0, 0.0f, xRight0, y0, 0.0f, xLeft1, y1, 0.0f});
         // Zweites Dreieck
         vertices.insert(vertices.end(), {xLeft1, y1, 0.0f, xRight0, y0, 0.0f, xRight1, y1, 0.0f});
+
+        glm::vec3 v0(xLeft0, y0, 0.0f);
+        glm::vec3 v1(xRight0, y0, 0.0f);
+        glm::vec3 v2(xLeft1, y1, 0.0f);
+        glm::vec3 v3(xRight1, y1, 0.0f);
+
+        glm::vec3 n1 = glm::normalize(glm::cross(v1 - v0, v2 - v0));
+        glm::vec3 n2 = glm::normalize(glm::cross(v3 - v1, v2 - v1));
+
+        for (int j = 0; j < 3; ++j)
+        {
+            normals.insert(normals.end(), {n1.x, n1.y, n1.z});
+        }
+        for (int j = 0; j < 3; ++j)
+        {
+            normals.insert(normals.end(), {n2.x, n2.y, n2.z});
+        }
     }
 
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertices.size(), vertices.data(), GL_STATIC_DRAW);
 
+    glGenBuffers(1, &vboNormals);
+    glBindBuffer(GL_ARRAY_BUFFER, vboNormals);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * normals.size(), normals.data(), GL_STATIC_DRAW);
+
     shaderProgram = LoadShaders("../shader/grass.vert", "../shader/grass.frag");
     aPosLocation = glGetAttribLocation(shaderProgram, "aPos");
+    aNormalLocation = glGetAttribLocation(shaderProgram, "aNormal");
     vertexCount = vertices.size() / 3;
 
     float planeSize = plane.getSize();
@@ -97,6 +120,15 @@ void Grass::draw() const
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
+    GLuint lightPosLoc = glGetUniformLocation(shaderProgram, "lightPos");
+    GLuint viewPosLoc = glGetUniformLocation(shaderProgram, "viewPos");
+
+    glm::vec3 lightPos(10.0f, 15.0f, 10.0f); // z.B. leicht schräg von oben
+    glm::vec3 viewPos(0.0f, 5.0f, 10.0f);    // z.B. leicht schräg von vorne
+
+    glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
+    glUniform3f(viewPosLoc, viewPos.x, viewPos.y, viewPos.z);
+
     glEnableVertexAttribArray(aPosLocation);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glVertexAttribPointer(aPosLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
@@ -115,6 +147,10 @@ void Grass::draw() const
         model = glm::scale(model, glm::vec3(instance.scaleWidth, instance.scaleHeight, instance.scaleWidth));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 
+        glBindBuffer(GL_ARRAY_BUFFER, vboNormals);
+        glVertexAttribPointer(aNormalLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
+        glEnableVertexAttribArray(aNormalLocation);
+
         glDrawArrays(GL_TRIANGLES, 0, vertexCount);
     }
 
@@ -123,6 +159,7 @@ void Grass::draw() const
     float t = glutGet(GLUT_ELAPSED_TIME) / 1000.0f; // Zeit in Sekunden
     glUniform1f(timeLoc, t);
 
+    glDisableVertexAttribArray(aNormalLocation);
     glDisableVertexAttribArray(aPosLocation);
 
     glUseProgram(0);

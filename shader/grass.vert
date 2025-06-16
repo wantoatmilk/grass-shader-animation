@@ -11,6 +11,7 @@ uniform vec3 instancePos; // globale pos für instanzen
 //normals
 attribute vec3 aNormal;
 varying vec3 Normal;
+varying vec3 FragPos;
 
 varying float vHeight; // Höhe des Halmpunktes für Farbe im Fragment-Shader
 
@@ -63,6 +64,7 @@ void main()
     modelPos.x += sway; // Wende sway im Welt-Raum an
 
     Normal = mat3(model) * aNormal;
+    FragPos = vec3(model * vec4(aPos, 1.0));
 
     gl_Position = projection * view * modelPos;
 }

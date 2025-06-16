@@ -39,7 +39,7 @@ void display()
     glLoadIdentity();
 
     plane.draw();
-    // grass.draw();
+    grass.draw();
 
     // bunny.draw();
 
@@ -101,7 +101,7 @@ int main(int argc, char **argv)
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f); // hintergrund
 
     plane.setup();
-    // grass.setup();
+    grass.setup();
 
     // bunny laden
     // bunny.setup();

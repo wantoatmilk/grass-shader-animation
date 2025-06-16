@@ -17,6 +17,7 @@ void main()
     float blueVariation = 0.1 + 0.1 * fract(sin(instanceColorSeed * 56.78) * 98765.4321);
     
     float t = clamp((vHeight - 0.6) / 0.4, 0.0, 1.0); //gradienten höhe
+    float shadowRamp = smoothstep(0.0, 0.3, vHeight - 0.2);
     /*
     •	vHeight - 0.6 → verschiebt den Startpunkt des Übergangs (erst ab 0.6 beginnt es gelb zu werden)
 	•	/ 0.4 → bestimmt, wie schnell der Übergang erfolgt (von 0.6 bis 1.0)
@@ -30,25 +31,27 @@ void main()
 
     //lichtshader
     vec3 norm = normalize(Normal);
+    if (!gl_FrontFacing) norm = -norm;
     vec3 lightDir = normalize(lightPos - FragPos);
 
     // Ambient
-    float ambientStrength = 0.1;
+    float ambientStrength = 0.55;
     vec3 ambient = ambientStrength * vec3(1.0);
 
     // Diffuse
     float diff = max(dot(norm, lightDir), 0.0);
-    vec3 diffuse = diff * vec3(1.0);
+    vec3 diffuse = diff * vec3(0.45);
 
     // Specular
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 reflectDir = reflect(-lightDir, norm);
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), 8.0);
-    float specularStrength = 0.2;
-    vec3 specular = specularStrength * spec * vec3(1.0);
+    float specularStrength = 0.15;
+    vec3 specular = specularStrength * spec * vec3(0.3);
 
     // Endfarbe aus Licht × Farbe
-    vec3 litColor = (ambient + diffuse + specular) * finalColor;
+    //vec3 litColor = clamp((ambient + diffuse + specular) * finalColor, 0.0, 1.0);
+    vec3 litColor = clamp((ambient + diffuse + specular) * finalColor * (0.7 + 0.3 * shadowRamp), 0.0, 1.0);
     gl_FragColor = vec4(litColor, 1.0);
 
     //gl_FragColor = vec4(finalColor, 1.0);
