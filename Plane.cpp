@@ -25,8 +25,10 @@ Plane::Plane()
 {
     vbo = 0;
     ibo = 0;
+    vboNormals = 0;
     shaderProgram = 0;
     aPosLocation = -1;
+    aNormalLocation = -1;
     mitte = 5.0f;
 }
 
@@ -34,6 +36,7 @@ Plane::~Plane()
 {
     glDeleteBuffers(1, &vbo);
     glDeleteBuffers(1, &ibo);
+    glDeleteBuffers(1, &vboNormals);
     glDeleteProgram(shaderProgram);
 }
 
@@ -57,6 +60,7 @@ void Plane::setupPlane()
 {
 
     std::vector<float> vertices;
+    std::vector<float> normals;
     int resolution = 50; // Anzahl Teilstücke pro Achse
 
     for (int i = 0; i <= resolution; ++i)
@@ -70,6 +74,18 @@ void Plane::setupPlane()
             vertices.push_back(x);
             vertices.push_back(y);
             vertices.push_back(z);
+
+            glm::vec3 p = glm::vec3(x, y, z);
+            float eps = 0.1f;
+            glm::vec3 px = glm::vec3(x + eps, terrainNoise(x + eps, z), z);
+            glm::vec3 pz = glm::vec3(x, terrainNoise(x, z + eps), z + eps);
+            glm::vec3 dx = px - p;
+            glm::vec3 dz = pz - p;
+            glm::vec3 normal = glm::normalize(glm::cross(dx, dz));
+
+            normals.push_back(normal.x);
+            normals.push_back(normal.y);
+            normals.push_back(normal.z);
         }
     }
 
@@ -95,6 +111,10 @@ void Plane::setupPlane()
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
 
+    glGenBuffers(1, &vboNormals);
+    glBindBuffer(GL_ARRAY_BUFFER, vboNormals);
+    glBufferData(GL_ARRAY_BUFFER, normals.size() * sizeof(float), normals.data(), GL_STATIC_DRAW);
+
     glGenBuffers(1, &ibo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
@@ -119,6 +139,7 @@ void Plane::setupShader()
 {
     shaderProgram = LoadShaders("../shader/plane.vert", "../shader/plane.frag");
     aPosLocation = glGetAttribLocation(shaderProgram, "aPos");
+    aNormalLocation = glGetAttribLocation(shaderProgram, "aNormal");
 }
 
 void Plane::draw() const
@@ -129,6 +150,15 @@ void Plane::draw() const
     GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
     GLuint viewLoc = glGetUniformLocation(shaderProgram, "view");
     GLuint projectionLoc = glGetUniformLocation(shaderProgram, "projection");
+
+    GLuint lightPosLoc = glGetUniformLocation(shaderProgram, "lightPos");
+    GLuint viewPosLoc = glGetUniformLocation(shaderProgram, "viewPos");
+
+    glm::vec3 lightPos(5.0f, 10.0f, 5.0f); // z.B. leicht schräg von oben
+    glm::vec3 viewPos(0.0f, 5.0f, 10.0f);  // z.B. leicht schräg von vorne
+
+    glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
+    glUniform3f(viewPosLoc, viewPos.x, viewPos.y, viewPos.z);
 
     // Model-Matrix (identisch, wir verschieben Plane nicht)
     float modelMatrix[16] = {
@@ -153,8 +183,13 @@ void Plane::draw() const
     glVertexAttribPointer(aPosLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
     glEnableVertexAttribArray(aPosLocation);
 
+    glBindBuffer(GL_ARRAY_BUFFER, vboNormals);
+    glVertexAttribPointer(aNormalLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glEnableVertexAttribArray(aNormalLocation);
+
     glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0);
 
     glDisableVertexAttribArray(aPosLocation);
+    glDisableVertexAttribArray(aNormalLocation);
     glUseProgram(0);
 }

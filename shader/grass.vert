@@ -8,6 +8,10 @@ uniform mat4 projection; //projection: Perspektive (wie du den 3D-Raum auf 2D ab
 uniform float time; //zeit fürs animieren
 uniform vec3 instancePos; // globale pos für instanzen
 
+//normals
+attribute vec3 aNormal;
+varying vec3 Normal;
+
 varying float vHeight; // Höhe des Halmpunktes für Farbe im Fragment-Shader
 
 vec2 hash(vec2 p) {
@@ -57,5 +61,8 @@ void main()
     vec4 localPos = vec4(aPos, 1.0);
     vec4 modelPos = model * localPos;
     modelPos.x += sway; // Wende sway im Welt-Raum an
+
+    Normal = mat3(model) * aNormal;
+
     gl_Position = projection * view * modelPos;
 }

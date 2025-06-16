@@ -18,6 +18,8 @@ private:
     GLuint ibo; // Index Buffer Object
     GLuint shaderProgram;
     GLint aPosLocation;
+    GLuint vboNormals;
+    GLint aNormalLocation;
 
     void setupPlane();
     void setupShader();

@@ -38,10 +38,10 @@ void display()
 
     glLoadIdentity();
 
-    // plane.draw(); // Plane zieht sich View/Projection-Matrix
+    plane.draw();
     // grass.draw();
 
-    bunny.draw();
+    // bunny.draw();
 
     glutSwapBuffers();
 }
@@ -64,6 +64,8 @@ int main(int argc, char **argv)
     glutInitWindowSize(800, 600);
     glutCreateWindow("Grass Shader - FPS: ");
 
+    std::cout << "OpenGL-Version: " << glGetString(GL_VERSION) << std::endl;
+
     GLenum err = glewInit();
     if (err != GLEW_OK)
     {
@@ -73,37 +75,36 @@ int main(int argc, char **argv)
 
     glEnable(GL_DEPTH_TEST);
     /*
-    glEnable(GL_LIGHTING);
-    glEnable(GL_LIGHT0);
-    GLfloat light_pos[] = {1.0f, 1.0f, 2.0f, 0.0f};
-    glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
-
+    // Entfernt: GLUT-Lichtsysteme stören mit eigenem Shader
+    // glEnable(GL_LIGHTING);
+    // glEnable(GL_LIGHT0);
+    // GLfloat light_pos[] = {1.0f, 1.0f, 2.0f, 0.0f};
+    // glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
 
     // maybe licht
-    glEnable(GL_LIGHTING);
-    glEnable(GL_LIGHT0);
-    glEnable(GL_NORMALIZE);
-    glShadeModel(GL_SMOOTH);
+    // glEnable(GL_LIGHTING);
+    // glEnable(GL_LIGHT0);
+    // glEnable(GL_NORMALIZE);
+    // glShadeModel(GL_SMOOTH);
 
-    GLfloat pos[] = {0.0f, 10.0f, 10.0f, 1.0f};
-    GLfloat ambient[] = {0.2f, 0.2f, 0.2f, 1.0f};
-    GLfloat diffuse[] = {0.8f, 0.8f, 0.8f, 1.0f};
-    GLfloat specular[] = {1.0f, 1.0f, 1.0f, 1.0f};
+    // GLfloat pos[] = {0.0f, 10.0f, 10.0f, 1.0f};
+    // GLfloat ambient[] = {0.2f, 0.2f, 0.2f, 1.0f};
+    // GLfloat diffuse[] = {0.8f, 0.8f, 0.8f, 1.0f};
+    // GLfloat specular[] = {1.0f, 1.0f, 1.0f, 1.0f};
 
-    glLightfv(GL_LIGHT0, GL_POSITION, pos);
-    glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-    glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
-
-     */
+    // glLightfv(GL_LIGHT0, GL_POSITION, pos);
+    // glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
+    // glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
+    // glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
+    */
 
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f); // hintergrund
 
-    // plane.setup();
+    plane.setup();
     // grass.setup();
 
     // bunny laden
-    bunny.setup();
+    // bunny.setup();
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);

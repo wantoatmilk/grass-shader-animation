@@ -25,12 +25,12 @@ void main()
     // Spekulare Beleuchtung (Phong)
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 reflectDir = reflect(-lightDir, norm);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0); // Glanzpunkt
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 8.0); // Glanzpunkt
     float specularStrength = 0.5;
     vec3 specular = specularStrength * spec * vec3(1.0);
 
     // Materialfarbe
-    vec3 objectColor = vec3(0.6, 0.6, 0.6); // Grau wie vorher
+    vec3 objectColor = vec3(0.6, 0.6, 0.6);
 
     // Endfarbe
     vec3 result = (ambient + diffuse + specular) * objectColor;
