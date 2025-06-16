@@ -20,6 +20,7 @@ add_executable(grass
     ShaderLoader.cpp
     ModelLoader.cpp
     Model.cpp
+    Hair.cpp
 )
 
 # OpenGL & GLUT Frameworks für macOS

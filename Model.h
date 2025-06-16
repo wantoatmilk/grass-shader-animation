@@ -13,6 +13,12 @@ public:
 
     void draw() const;
     void setup();
+    glm::vec3 getSize() const;
+    float getHeightAt(const glm::vec3 &position, float radius) const;
+
+    glm::vec3 getCenter() const;
+    std::vector<glm::vec3> getVertices() const;
+    std::vector<glm::vec3> getNormals() const;
 
 private:
     GLuint vbo;

@@ -177,6 +177,30 @@ Grass.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Grass.cpp.s
 .PHONY : Grass.cpp.s
 
+Hair.o: Hair.cpp.o
+.PHONY : Hair.o
+
+# target to build an object file
+Hair.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Hair.cpp.o
+.PHONY : Hair.cpp.o
+
+Hair.i: Hair.cpp.i
+.PHONY : Hair.i
+
+# target to preprocess a source file
+Hair.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Hair.cpp.i
+.PHONY : Hair.cpp.i
+
+Hair.s: Hair.cpp.s
+.PHONY : Hair.s
+
+# target to generate assembly for a file
+Hair.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grass.dir/build.make CMakeFiles/grass.dir/Hair.cpp.s
+.PHONY : Hair.cpp.s
+
 Model.o: Model.cpp.o
 .PHONY : Model.o
 
@@ -312,6 +336,9 @@ help:
 	@echo "... Grass.o"
 	@echo "... Grass.i"
 	@echo "... Grass.s"
+	@echo "... Hair.o"
+	@echo "... Hair.i"
+	@echo "... Hair.s"
 	@echo "... Model.o"
 	@echo "... Model.i"
 	@echo "... Model.s"

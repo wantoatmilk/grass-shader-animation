@@ -8,8 +8,10 @@
 #include "Grass.h"
 
 #include "Model.h"
+#include "Hair.h"
 
 Model bunny;
+Hair hair;
 Plane plane;
 Grass grass;
 Cam cam;
@@ -42,6 +44,7 @@ void display()
     grass.draw();
 
     bunny.draw();
+    // hair.draw();
 
     glutSwapBuffers();
 }
@@ -82,6 +85,7 @@ int main(int argc, char **argv)
 
     // bunny laden
     bunny.setup();
+    // hair.setup(); //lol doesnt work
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);

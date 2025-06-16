@@ -40,5 +40,11 @@
   "command": "/usr/bin/clang++  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Model.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Model.cpp",
   "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/Model.cpp",
   "output": "CMakeFiles/grass.dir/Model.cpp.o"
+},
+{
+  "directory": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/build",
+  "command": "/usr/bin/clang++  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/grass.dir/Hair.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Hair.cpp",
+  "file": "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/Hair.cpp",
+  "output": "CMakeFiles/grass.dir/Hair.cpp.o"
 }
 ]

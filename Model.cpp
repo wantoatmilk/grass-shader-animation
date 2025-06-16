@@ -10,6 +10,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <limits>
 
 extern Cam cam;
 
@@ -82,31 +83,10 @@ void Model::draw() const
     glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
     glUniform3f(viewPosLoc, viewPos.x, viewPos.y, viewPos.z);
 
-    // test maybe
-    /*
-    // Model-Matrix (identisch, wir verschieben Plane nicht)
-    float modelMatrix[16] = {
-        1, 0, 0, 0,
-        0, 1, 0, 0,
-        0, 0, 1, 0,
-        0, 0, 0, 1};
-
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, modelMatrix);
-
-    // View-Matrix von der Kamera holen
-    glm::mat4 viewMatrix = cam.getViewMatrix();
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(viewMatrix));
-
-    // Projection-Matrix erstellen (perspektivisch)
-    glm::mat4 projectionMatrix = glm::perspective(glm::radians(cam.getFov()), 800.0f / 600.0f, 0.1f, 100.0f);
-    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projectionMatrix));
-
-*/
-
     // Model-Matrix wo bist duuuuuu :(
     glm::mat4 modelMatrix = glm::mat4(1.0f);
     modelMatrix = glm::translate(modelMatrix, glm::vec3(0.5f, -1.0f, 0.0f));
-    modelMatrix = glm::scale(modelMatrix, glm::vec3(14.0f));
+    modelMatrix = glm::scale(modelMatrix, glm::vec3(24.0f));
     glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(modelMatrix));
 
     // View-Matrix von der Kamera holen
@@ -131,4 +111,61 @@ void Model::draw() const
 
     glDisableVertexAttribArray(aPosLocation);
     glUseProgram(0);
+}
+
+glm::vec3 Model::getSize() const
+{
+    glm::vec3 min = loader.vertices[0];
+    glm::vec3 max = loader.vertices[0];
+
+    for (const auto &v : loader.vertices)
+    {
+        min = glm::min(min, v);
+        max = glm::max(max, v);
+    }
+
+    return max - min;
+}
+
+float Model::getHeightAt(const glm::vec3 &position, float radius) const
+{
+    // Transformation rückgängig machen (Welt → Modellraum)
+    glm::vec3 localPos = (position - glm::vec3(0.5f, -1.0f, 0.0f)) / 14.0f;
+
+    float maxY = -std::numeric_limits<float>::infinity();
+
+    for (const auto &v : loader.vertices)
+    {
+        float dxz = glm::distance(glm::vec2(v.x, v.z), glm::vec2(localPos.x, localPos.z));
+        if (dxz < radius && v.y > maxY)
+        {
+            maxY = v.y;
+        }
+    }
+
+    return (maxY > -9999.0f) ? maxY * 14.0f - 14.0f + 1.0f : position.y; // skaliert + rückverschoben in Welt
+}
+
+std::vector<glm::vec3> Model::getVertices() const
+{
+    return loader.vertices;
+}
+
+std::vector<glm::vec3> Model::getNormals() const
+{
+    return loader.normals;
+}
+
+glm::vec3 Model::getCenter() const
+{
+    glm::vec3 min = loader.vertices[0];
+    glm::vec3 max = loader.vertices[0];
+
+    for (const auto &v : loader.vertices)
+    {
+        min = glm::min(min, v);
+        max = glm::max(max, v);
+    }
+
+    return (min + max) * 0.5f;
 }

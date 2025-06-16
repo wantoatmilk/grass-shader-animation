@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/grass.dir/Cam.cpp.o.d"
   "CMakeFiles/grass.dir/Grass.cpp.o"
   "CMakeFiles/grass.dir/Grass.cpp.o.d"
+  "CMakeFiles/grass.dir/Hair.cpp.o"
+  "CMakeFiles/grass.dir/Hair.cpp.o.d"
   "CMakeFiles/grass.dir/Model.cpp.o"
   "CMakeFiles/grass.dir/Model.cpp.o.d"
   "CMakeFiles/grass.dir/ModelLoader.cpp.o"
