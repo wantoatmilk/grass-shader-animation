@@ -8,6 +8,9 @@ uniform mat4 projection; //projection: Perspektive (wie du den 3D-Raum auf 2D ab
 uniform float time; //zeit fürs animieren
 uniform vec3 instancePos; // globale pos für instanzen
 
+//PERLIN ODER SIN
+const bool usePerlin = true;
+
 //normals
 attribute vec3 aNormal;
 varying vec3 Normal;
@@ -38,17 +41,16 @@ void main()
 
     vHeight = aPos.y; //y pos für gradient
 
-    // Erzeuge Perlin-basiertes Grundrauschen auf Weltposition
-    vec2 windSample = vec2(worldPos.z * 0.15 + time * 0.4, worldPos.x * 0.15 + time * 0.25);
-    float baseNoise = perlinNoise(windSample);
-
-    // Böen-Wellenform: bewegt sich entlang x-Achse in Weltkoordinaten
-    float gust = sin((worldPos.x * 0.8 - time * 2.0)) * 0.5 + 0.5;
-
-    // Windbeugung proportional zur Höhe (local y) und Windböe
     float sway = 0.0;
     if (aPos.y > 0.01) {
-        sway = baseNoise * gust * (aPos.y * (0.6 + aPos.y * 0.8)); //0.8 für normal, höher für starker wind
+        if (usePerlin) {
+            vec2 windSample = vec2(worldPos.z * 0.15 + time * 0.4, worldPos.x * 0.15 + time * 0.25);
+            float baseNoise = perlinNoise(windSample);
+            float gust = sin((worldPos.x * 0.8 - time * 2.0)) * 0.5 + 0.5;
+            sway = baseNoise * gust * (aPos.y * (0.6 + aPos.y * 0.8));
+        } else {
+            sway = sin(worldPos.x * 1.5 + time * 3.0) * (aPos.y * (0.6 + aPos.y * 0.8));
+        }
     }
 
     /*

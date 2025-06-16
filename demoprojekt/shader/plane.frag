@@ -41,6 +41,6 @@ void main()
     //mit licht
     //gl_FragColor = vec4(result, 1.0);
 
-    //ohe licht
+    //ohne licht
     gl_FragColor = vec4(0.6, 0.6, 0.6, 1.0);
 }
