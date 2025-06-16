@@ -65,7 +65,7 @@ void Model::draw() const
     glUseProgram(shaderProgram);
 
     // Framebuffer + Z-Buffer leeren (vor dem Zeichnen)
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    // glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // Uniform Locations holen
     GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
