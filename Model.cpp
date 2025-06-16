@@ -40,6 +40,11 @@ void Model::setupModel()
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, loader.vertices.size() * sizeof(glm::vec3), loader.vertices.data(), GL_STATIC_DRAW);
+
+    glGenBuffers(1, &vboNormals);
+    glBindBuffer(GL_ARRAY_BUFFER, vboNormals);
+    glBufferData(GL_ARRAY_BUFFER, loader.normals.size() * sizeof(glm::vec3), loader.normals.data(), GL_STATIC_DRAW);
+
     glGenBuffers(1, &ibo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, loader.indices.size() * sizeof(unsigned int), loader.indices.data(), GL_STATIC_DRAW);
@@ -52,6 +57,7 @@ void Model::setupShader()
 {
     shaderProgram = LoadShaders("../shader/model.vert", "../shader/model.frag");
     aPosLocation = glGetAttribLocation(shaderProgram, "aPos");
+    aNormalLocation = glGetAttribLocation(shaderProgram, "aNormal");
 }
 
 void Model::draw() const
@@ -65,6 +71,16 @@ void Model::draw() const
     GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
     GLuint viewLoc = glGetUniformLocation(shaderProgram, "view");
     GLuint projectionLoc = glGetUniformLocation(shaderProgram, "projection");
+
+    GLuint lightPosLoc = glGetUniformLocation(shaderProgram, "lightPos");
+    GLuint viewPosLoc = glGetUniformLocation(shaderProgram, "viewPos");
+
+    // Beispielwerte (kannst du später dynamisch setzen)
+    glm::vec3 lightPos(3.0f, 3.0f, 3.0f);
+    glm::vec3 viewPos(0.0f, 0.0f, 5.0f); // Kamera von vorne
+
+    glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
+    glUniform3f(viewPosLoc, viewPos.x, viewPos.y, viewPos.z);
 
     // test maybe
     /*
@@ -106,6 +122,10 @@ void Model::draw() const
 
     glVertexAttribPointer(aPosLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
     glEnableVertexAttribArray(aPosLocation);
+
+    glBindBuffer(GL_ARRAY_BUFFER, vboNormals);
+    glVertexAttribPointer(aNormalLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glEnableVertexAttribArray(aNormalLocation);
 
     glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0);
 

@@ -38,8 +38,8 @@ void display()
 
     glLoadIdentity();
 
-    plane.draw(); // Plane zieht sich View/Projection-Matrix
-    grass.draw();
+    // plane.draw(); // Plane zieht sich View/Projection-Matrix
+    // grass.draw();
 
     bunny.draw();
 
@@ -77,7 +77,7 @@ int main(int argc, char **argv)
     glEnable(GL_LIGHT0);
     GLfloat light_pos[] = {1.0f, 1.0f, 2.0f, 0.0f};
     glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
-    */
+
 
     // maybe licht
     glEnable(GL_LIGHTING);
@@ -95,10 +95,12 @@ int main(int argc, char **argv)
     glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
     glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
 
+     */
+
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f); // hintergrund
 
-    plane.setup();
-    grass.setup();
+    // plane.setup();
+    // grass.setup();
 
     // bunny laden
     bunny.setup();

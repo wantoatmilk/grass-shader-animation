@@ -23,6 +23,9 @@ private:
     int indexCount;
     glm::vec3 position;
 
+    GLuint vboNormals;
+    GLint aNormalLocation;
+
     ModelLoader loader;
 
     void setupModel();

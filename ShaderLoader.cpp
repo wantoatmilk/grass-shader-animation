@@ -52,7 +52,9 @@ GLuint LoadShaders(const char *vertex_file_path, const char *fragment_file_path)
         glGetShaderiv(VertexShaderID, GL_INFO_LOG_LENGTH, &InfoLogLength);
         std::vector<char> VertexShaderErrorMessage(InfoLogLength);
         glGetShaderInfoLog(VertexShaderID, InfoLogLength, NULL, &VertexShaderErrorMessage[0]);
-        std::cerr << &VertexShaderErrorMessage[0] << std::endl;
+        std::cerr << "Fehler beim Kompilieren des Vertex Shaders:\n"
+                  << &VertexShaderErrorMessage[0] << std::endl;
+        exit(1);
     }
 
     // Fragment Shader kompilieren
@@ -66,7 +68,9 @@ GLuint LoadShaders(const char *vertex_file_path, const char *fragment_file_path)
         glGetShaderiv(FragmentShaderID, GL_INFO_LOG_LENGTH, &InfoLogLength);
         std::vector<char> FragmentShaderErrorMessage(InfoLogLength);
         glGetShaderInfoLog(FragmentShaderID, InfoLogLength, NULL, &FragmentShaderErrorMessage[0]);
-        std::cerr << &FragmentShaderErrorMessage[0] << std::endl;
+        std::cerr << "Fehler beim Kompilieren des Fragment Shaders:\n"
+                  << &FragmentShaderErrorMessage[0] << std::endl;
+        exit(1);
     }
 
     // Shader Programm linken
@@ -81,11 +85,15 @@ GLuint LoadShaders(const char *vertex_file_path, const char *fragment_file_path)
         glGetProgramiv(ProgramID, GL_INFO_LOG_LENGTH, &InfoLogLength);
         std::vector<char> ProgramErrorMessage(InfoLogLength);
         glGetProgramInfoLog(ProgramID, InfoLogLength, NULL, &ProgramErrorMessage[0]);
-        std::cerr << &ProgramErrorMessage[0] << std::endl;
+        std::cerr << "Fehler beim Linken des Shader-Programms:\n"
+                  << &ProgramErrorMessage[0] << std::endl;
+        exit(1);
     }
 
     glDeleteShader(VertexShaderID);
     glDeleteShader(FragmentShaderID);
+
+    std::cout << "Shader erfolgreich geladen (ID: " << ProgramID << ")" << std::endl;
 
     return ProgramID;
 }
