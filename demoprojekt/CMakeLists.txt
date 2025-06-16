@@ -17,6 +17,7 @@ add_executable(demo
     Cam.cpp
     Grass.cpp
     Plane.cpp
+    ShaderLoader.cpp
 )
 
 # OpenGL & GLUT Frameworks für macOS

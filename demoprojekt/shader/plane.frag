@@ -27,11 +27,20 @@ void main()
     vec3 specular = specularStrength * spec * vec3(1.0);
 
     // Materialfarbe
-    vec3 objectColor = vec3(0.1, 0.4, 0.1); //farbe
+    vec3 objectColor = vec3(0.6, 0.6, 0.6); //farbe
 
     vec3 result = (ambient + diffuse + specular) * objectColor;
     float d = dot(norm, lightDir);
-    gl_FragColor = vec4(result, 1.0);
+    
+    
     //gl_FragColor = vec4(abs(Normal), 1.0);
+
+    //normale zeigen
     //gl_FragColor = vec4(normalize(Normal) * 0.5 + 0.5, 1.0);
+
+    //mit licht
+    //gl_FragColor = vec4(result, 1.0);
+
+    //ohe licht
+    gl_FragColor = vec4(0.6, 0.6, 0.6, 1.0);
 }

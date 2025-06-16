@@ -153,53 +153,77 @@ Cam.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/Cam.cpp.s
 .PHONY : Cam.cpp.s
 
-demo_grass.o: demo_grass.cpp.o
-.PHONY : demo_grass.o
+Grass.o: Grass.cpp.o
+.PHONY : Grass.o
 
 # target to build an object file
-demo_grass.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo_grass.cpp.o
-.PHONY : demo_grass.cpp.o
+Grass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/Grass.cpp.o
+.PHONY : Grass.cpp.o
 
-demo_grass.i: demo_grass.cpp.i
-.PHONY : demo_grass.i
+Grass.i: Grass.cpp.i
+.PHONY : Grass.i
 
 # target to preprocess a source file
-demo_grass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo_grass.cpp.i
-.PHONY : demo_grass.cpp.i
+Grass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/Grass.cpp.i
+.PHONY : Grass.cpp.i
 
-demo_grass.s: demo_grass.cpp.s
-.PHONY : demo_grass.s
+Grass.s: Grass.cpp.s
+.PHONY : Grass.s
 
 # target to generate assembly for a file
-demo_grass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo_grass.cpp.s
-.PHONY : demo_grass.cpp.s
+Grass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/Grass.cpp.s
+.PHONY : Grass.cpp.s
 
-demo_plane.o: demo_plane.cpp.o
-.PHONY : demo_plane.o
+Plane.o: Plane.cpp.o
+.PHONY : Plane.o
 
 # target to build an object file
-demo_plane.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo_plane.cpp.o
-.PHONY : demo_plane.cpp.o
+Plane.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/Plane.cpp.o
+.PHONY : Plane.cpp.o
 
-demo_plane.i: demo_plane.cpp.i
-.PHONY : demo_plane.i
+Plane.i: Plane.cpp.i
+.PHONY : Plane.i
 
 # target to preprocess a source file
-demo_plane.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo_plane.cpp.i
-.PHONY : demo_plane.cpp.i
+Plane.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/Plane.cpp.i
+.PHONY : Plane.cpp.i
 
-demo_plane.s: demo_plane.cpp.s
-.PHONY : demo_plane.s
+Plane.s: Plane.cpp.s
+.PHONY : Plane.s
 
 # target to generate assembly for a file
-demo_plane.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo_plane.cpp.s
-.PHONY : demo_plane.cpp.s
+Plane.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/Plane.cpp.s
+.PHONY : Plane.cpp.s
+
+ShaderLoader.o: ShaderLoader.cpp.o
+.PHONY : ShaderLoader.o
+
+# target to build an object file
+ShaderLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/ShaderLoader.cpp.o
+.PHONY : ShaderLoader.cpp.o
+
+ShaderLoader.i: ShaderLoader.cpp.i
+.PHONY : ShaderLoader.i
+
+# target to preprocess a source file
+ShaderLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/ShaderLoader.cpp.i
+.PHONY : ShaderLoader.cpp.i
+
+ShaderLoader.s: ShaderLoader.cpp.s
+.PHONY : ShaderLoader.s
+
+# target to generate assembly for a file
+ShaderLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/ShaderLoader.cpp.s
+.PHONY : ShaderLoader.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -237,12 +261,15 @@ help:
 	@echo "... Cam.o"
 	@echo "... Cam.i"
 	@echo "... Cam.s"
-	@echo "... demo_grass.o"
-	@echo "... demo_grass.i"
-	@echo "... demo_grass.s"
-	@echo "... demo_plane.o"
-	@echo "... demo_plane.i"
-	@echo "... demo_plane.s"
+	@echo "... Grass.o"
+	@echo "... Grass.i"
+	@echo "... Grass.s"
+	@echo "... Plane.o"
+	@echo "... Plane.i"
+	@echo "... Plane.s"
+	@echo "... ShaderLoader.o"
+	@echo "... ShaderLoader.i"
+	@echo "... ShaderLoader.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

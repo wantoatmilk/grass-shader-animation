@@ -100,53 +100,69 @@ CMakeFiles/demo.dir/Cam.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/Cam.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Cam.cpp -o CMakeFiles/demo.dir/Cam.cpp.s
 
-CMakeFiles/demo.dir/demo_grass.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/demo_grass.cpp.o: /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_grass.cpp
-CMakeFiles/demo.dir/demo_grass.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/demo_grass.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/demo_grass.cpp.o -MF CMakeFiles/demo.dir/demo_grass.cpp.o.d -o CMakeFiles/demo.dir/demo_grass.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_grass.cpp
+CMakeFiles/demo.dir/Grass.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/Grass.cpp.o: /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Grass.cpp
+CMakeFiles/demo.dir/Grass.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/Grass.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/Grass.cpp.o -MF CMakeFiles/demo.dir/Grass.cpp.o.d -o CMakeFiles/demo.dir/Grass.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Grass.cpp
 
-CMakeFiles/demo.dir/demo_grass.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/demo_grass.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_grass.cpp > CMakeFiles/demo.dir/demo_grass.cpp.i
+CMakeFiles/demo.dir/Grass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/Grass.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Grass.cpp > CMakeFiles/demo.dir/Grass.cpp.i
 
-CMakeFiles/demo.dir/demo_grass.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/demo_grass.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_grass.cpp -o CMakeFiles/demo.dir/demo_grass.cpp.s
+CMakeFiles/demo.dir/Grass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/Grass.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Grass.cpp -o CMakeFiles/demo.dir/Grass.cpp.s
 
-CMakeFiles/demo.dir/demo_plane.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/demo_plane.cpp.o: /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_plane.cpp
-CMakeFiles/demo.dir/demo_plane.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/demo_plane.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/demo_plane.cpp.o -MF CMakeFiles/demo.dir/demo_plane.cpp.o.d -o CMakeFiles/demo.dir/demo_plane.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_plane.cpp
+CMakeFiles/demo.dir/Plane.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/Plane.cpp.o: /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Plane.cpp
+CMakeFiles/demo.dir/Plane.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/Plane.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/Plane.cpp.o -MF CMakeFiles/demo.dir/Plane.cpp.o.d -o CMakeFiles/demo.dir/Plane.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Plane.cpp
 
-CMakeFiles/demo.dir/demo_plane.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/demo_plane.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_plane.cpp > CMakeFiles/demo.dir/demo_plane.cpp.i
+CMakeFiles/demo.dir/Plane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/Plane.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Plane.cpp > CMakeFiles/demo.dir/Plane.cpp.i
 
-CMakeFiles/demo.dir/demo_plane.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/demo_plane.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_plane.cpp -o CMakeFiles/demo.dir/demo_plane.cpp.s
+CMakeFiles/demo.dir/Plane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/Plane.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Plane.cpp -o CMakeFiles/demo.dir/Plane.cpp.s
+
+CMakeFiles/demo.dir/ShaderLoader.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/ShaderLoader.cpp.o: /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/ShaderLoader.cpp
+CMakeFiles/demo.dir/ShaderLoader.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo.dir/ShaderLoader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/ShaderLoader.cpp.o -MF CMakeFiles/demo.dir/ShaderLoader.cpp.o.d -o CMakeFiles/demo.dir/ShaderLoader.cpp.o -c /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/ShaderLoader.cpp
+
+CMakeFiles/demo.dir/ShaderLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/ShaderLoader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/ShaderLoader.cpp > CMakeFiles/demo.dir/ShaderLoader.cpp.i
+
+CMakeFiles/demo.dir/ShaderLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/ShaderLoader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/ShaderLoader.cpp -o CMakeFiles/demo.dir/ShaderLoader.cpp.s
 
 # Object files for target demo
 demo_OBJECTS = \
 "CMakeFiles/demo.dir/main.cpp.o" \
 "CMakeFiles/demo.dir/Cam.cpp.o" \
-"CMakeFiles/demo.dir/demo_grass.cpp.o" \
-"CMakeFiles/demo.dir/demo_plane.cpp.o"
+"CMakeFiles/demo.dir/Grass.cpp.o" \
+"CMakeFiles/demo.dir/Plane.cpp.o" \
+"CMakeFiles/demo.dir/ShaderLoader.cpp.o"
 
 # External object files for target demo
 demo_EXTERNAL_OBJECTS =
 
 demo: CMakeFiles/demo.dir/main.cpp.o
 demo: CMakeFiles/demo.dir/Cam.cpp.o
-demo: CMakeFiles/demo.dir/demo_grass.cpp.o
-demo: CMakeFiles/demo.dir/demo_plane.cpp.o
+demo: CMakeFiles/demo.dir/Grass.cpp.o
+demo: CMakeFiles/demo.dir/Plane.cpp.o
+demo: CMakeFiles/demo.dir/ShaderLoader.cpp.o
 demo: CMakeFiles/demo.dir/build.make
 demo: /opt/homebrew/lib/libGLEW.dylib
 demo: /opt/homebrew/lib/libassimp.dylib
 demo: CMakeFiles/demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

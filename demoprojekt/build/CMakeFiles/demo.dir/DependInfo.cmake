@@ -9,8 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Cam.cpp" "CMakeFiles/demo.dir/Cam.cpp.o" "gcc" "CMakeFiles/demo.dir/Cam.cpp.o.d"
-  "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_grass.cpp" "CMakeFiles/demo.dir/demo_grass.cpp.o" "gcc" "CMakeFiles/demo.dir/demo_grass.cpp.o.d"
-  "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/demo_plane.cpp" "CMakeFiles/demo.dir/demo_plane.cpp.o" "gcc" "CMakeFiles/demo.dir/demo_plane.cpp.o.d"
+  "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Grass.cpp" "CMakeFiles/demo.dir/Grass.cpp.o" "gcc" "CMakeFiles/demo.dir/Grass.cpp.o.d"
+  "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Plane.cpp" "CMakeFiles/demo.dir/Plane.cpp.o" "gcc" "CMakeFiles/demo.dir/Plane.cpp.o.d"
+  "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/ShaderLoader.cpp" "CMakeFiles/demo.dir/ShaderLoader.cpp.o" "gcc" "CMakeFiles/demo.dir/ShaderLoader.cpp.o.d"
   "/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/main.cpp" "CMakeFiles/demo.dir/main.cpp.o" "gcc" "CMakeFiles/demo.dir/main.cpp.o.d"
   )
 

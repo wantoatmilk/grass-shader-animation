@@ -26,6 +26,7 @@ private:
     float mitte;
     int vertexCount;
     int indexCount; // Anzahl der Indices
+    bool usePerlin;
 };
 
 #endif

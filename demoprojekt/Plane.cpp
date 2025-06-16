@@ -12,6 +12,11 @@
 
 extern Cam cam;
 
+float flatTerrain(float x, float z)
+{
+    return 0.0f;
+}
+
 siv::PerlinNoise perlin(1234); // Seed beliebig änderbar
 
 // für hügel
@@ -30,6 +35,9 @@ Plane::Plane()
     aPosLocation = -1;
     aNormalLocation = -1;
     mitte = 5.0f;
+
+    // HIER PERLIN!!
+    usePerlin = false;
 }
 
 Plane::~Plane()
@@ -69,7 +77,7 @@ void Plane::setupPlane()
         {
             float x = -mitte + 2 * mitte * (float)i / resolution;
             float z = -mitte + 2 * mitte * (float)j / resolution;
-            float y = terrainNoise(x, z); // HÖHE aus Noise
+            float y = usePerlin ? terrainNoise(x, z) : flatTerrain(x, z); // HÖHE aus Noise oder flach
 
             vertices.push_back(x);
             vertices.push_back(y);
@@ -77,8 +85,8 @@ void Plane::setupPlane()
 
             glm::vec3 p = glm::vec3(x, y, z);
             float eps = 0.1f;
-            glm::vec3 px = glm::vec3(x + eps, terrainNoise(x + eps, z), z);
-            glm::vec3 pz = glm::vec3(x, terrainNoise(x, z + eps), z + eps);
+            glm::vec3 px = glm::vec3(x + eps, usePerlin ? terrainNoise(x + eps, z) : flatTerrain(x + eps, z), z);
+            glm::vec3 pz = glm::vec3(x, usePerlin ? terrainNoise(x, z + eps) : flatTerrain(x, z + eps), z + eps);
             glm::vec3 dx = px - p;
             glm::vec3 dz = pz - p;
             glm::vec3 normal = glm::normalize(glm::cross(dx, dz));
@@ -121,18 +129,6 @@ void Plane::setupPlane()
 
     vertexCount = vertices.size() / 3;
     indexCount = indices.size();
-
-    /*
-        float vertices[] = {
-            -mitte, 0.0f, -mitte,
-            mitte, 0.0f, -mitte,
-            mitte, 0.0f, mitte,
-            -mitte, 0.0f, mitte};
-
-        glGenBuffers(1, &vbo);
-        glBindBuffer(GL_ARRAY_BUFFER, vbo);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-        */
 }
 
 void Plane::setupShader()

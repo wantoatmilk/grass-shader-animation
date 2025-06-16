@@ -4,8 +4,12 @@
 
 #include <iostream>
 #include "Cam.h"
+#include "Plane.h"
+#include "Grass.h"
 
 Cam cam;
+Plane plane;
+Grass grass;
 
 // framerate zaehler
 int frameCount = 0;
@@ -32,6 +36,8 @@ void display()
     glLoadIdentity();
 
     // hier draws
+    plane.draw();
+    // grass.draw();
 
     glutSwapBuffers();
 }
@@ -66,6 +72,8 @@ int main(int argc, char **argv)
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f); // hintergrund
 
     // hier setup
+    plane.setup();
+    // grass.setup();
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
