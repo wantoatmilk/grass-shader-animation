@@ -37,7 +37,7 @@ void display()
 
     // hier draws
     plane.draw();
-    // grass.draw();
+    grass.draw();
 
     glutSwapBuffers();
 }
@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 
     // hier setup
     plane.setup();
-    // grass.setup();
+    grass.setup();
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);

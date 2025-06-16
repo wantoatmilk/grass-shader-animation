@@ -82,26 +82,39 @@ void Grass::setup()
     vertexCount = vertices.size() / 3;
 
     float planeSize = plane.getSize();
-    int numHalme = 100; // halmanzahl!
+    // int numHalme = 1; // halmanzahl!
+    // for (int i = 0; i < numHalme; ++i)
+    // {
+    //     for (int j = 0; j < numHalme; ++j)
+    //     {
+    //         float x = static_cast<float>(rand()) / RAND_MAX * planeSize - planeSize / 2.0f;
+    //         float z = static_cast<float>(rand()) / RAND_MAX * planeSize - planeSize / 2.0f;
+    //         float y = plane.getHeightAt(x, z);
 
-    for (int i = 0; i < numHalme; ++i)
-    {
-        for (int j = 0; j < numHalme; ++j)
-        {
-            float x = static_cast<float>(rand()) / RAND_MAX * planeSize - planeSize / 2.0f;
-            float z = static_cast<float>(rand()) / RAND_MAX * planeSize - planeSize / 2.0f;
-            float y = plane.getHeightAt(x, z);
+    //         GrassInstance instance;
+    //         instance.position = glm::vec3(x, y, z); // globale pos
+    //         instance.scaleHeight = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
+    //         instance.scaleWidth = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
+    //         instance.rotationAngle = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX)) * glm::radians(360.0f);
+    //         instance.colorSeed = static_cast<float>(rand()) / RAND_MAX;
 
-            GrassInstance instance;
-            instance.position = glm::vec3(x, y, z); // globale pos
-            instance.scaleHeight = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
-            instance.scaleWidth = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
-            instance.rotationAngle = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX)) * glm::radians(360.0f);
-            instance.colorSeed = static_cast<float>(rand()) / RAND_MAX;
+    //         instances.push_back(instance);
+    //     }
+    // }
 
-            instances.push_back(instance);
-        }
-    }
+    // Nur ein einzelner Halm in der Mitte für die Demo
+    float x = 0.0f;
+    float z = 0.0f;
+    float y = plane.getHeightAt(x, z);
+
+    GrassInstance instance;
+    instance.position = glm::vec3(x, y, z);
+    instance.scaleHeight = 1.0f;
+    instance.scaleWidth = 1.0f;
+    instance.rotationAngle = 0.0f;
+    instance.colorSeed = 0.5f;
+
+    instances.push_back(instance);
 }
 
 void Grass::draw() const

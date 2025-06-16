@@ -17,7 +17,7 @@ float flatTerrain(float x, float z)
     return 0.0f;
 }
 
-siv::PerlinNoise perlin(1234); // Seed beliebig änderbar
+siv::PerlinNoise perlin(7293); // Seed beliebig änderbar
 
 // für hügel
 float terrainNoise(float x, float z)
@@ -34,7 +34,7 @@ Plane::Plane()
     shaderProgram = 0;
     aPosLocation = -1;
     aNormalLocation = -1;
-    mitte = 5.0f;
+    mitte = 2.0f;
 
     // HIER PERLIN!!
     usePerlin = false;
@@ -61,7 +61,14 @@ float Plane::getSize() const
 
 float Plane::getHeightAt(float x, float z) const
 {
-    return terrainNoise(x, z);
+    if (usePerlin == true)
+    {
+        return terrainNoise(x, z);
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 void Plane::setupPlane()
