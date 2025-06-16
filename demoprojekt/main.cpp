@@ -3,17 +3,8 @@
 #include <GLUT/glut.h>
 
 #include <iostream>
-#include "Plane.h"
 #include "Cam.h"
-#include "Grass.h"
 
-#include "Model.h"
-#include "Hair.h"
-
-Model bunny;
-Hair hair;
-Plane plane;
-Grass grass;
 Cam cam;
 
 // framerate zaehler
@@ -30,7 +21,7 @@ void display()
     if (currentTime - lastTime >= 1.0f) // alle 1 Sekunde
     {
         // std::cout << "FPS: " << frameCount << std::endl;
-        std::string title = "Grass Shader - FPS: " + std::to_string(frameCount);
+        std::string title = "Demo! - FPS: " + std::to_string(frameCount);
         glutSetWindowTitle(title.c_str());
         frameCount = 0;
         lastTime = currentTime;
@@ -40,11 +31,7 @@ void display()
 
     glLoadIdentity();
 
-    plane.draw();
-    grass.draw();
-
-    bunny.draw();
-    // hair.draw();
+    // hier draws
 
     glutSwapBuffers();
 }
@@ -65,7 +52,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("Grass Shader - FPS: ");
+    glutCreateWindow("Demo! - FPS: ");
 
     GLenum err = glewInit();
     if (err != GLEW_OK)
@@ -78,12 +65,7 @@ int main(int argc, char **argv)
 
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f); // hintergrund
 
-    plane.setup();
-    grass.setup();
-
-    // bunny laden
-    bunny.setup();
-    // hair.setup(); //lol doesnt work
+    // hier setup
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
