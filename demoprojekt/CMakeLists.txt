@@ -15,8 +15,8 @@ include_directories(/opt/homebrew/include)
 add_executable(demo
     main.cpp
     Cam.cpp
-    demo_grass.cpp
-    demo_plane.cpp
+    Grass.cpp
+    Plane.cpp
 )
 
 # OpenGL & GLUT Frameworks für macOS
