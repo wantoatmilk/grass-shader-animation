@@ -84,7 +84,7 @@ void Grass::setup()
     float planeSize = plane.getSize();
 
     /*
-    //für mehrere in der grid (mit dem randomize kriegt man die grid raus!)
+    // für mehrere in der grid (mit dem randomize kriegt man die grid raus!)
 
     int numHalme = 15;
     float spacing = planeSize / numHalme;
@@ -107,6 +107,7 @@ void Grass::setup()
         }
     }
     */
+
     ///*
     // Nur ein einzelner Halm in der Mitte für die Demo
     float x = 0.0f;

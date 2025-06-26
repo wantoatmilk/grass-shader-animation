@@ -9,7 +9,7 @@ uniform float time; //zeit fürs animieren
 uniform vec3 instancePos; // globale pos für instanzen
 
 //PERLIN ODER SIN
-const bool usePerlin = true;
+const bool usePerlin = false;
 
 //normals
 attribute vec3 aNormal;
@@ -41,7 +41,7 @@ void main()
 
     vHeight = aPos.y; //y pos für gradient
 
-    float sway = 0.0;
+    float sway = 0.1;
     if (aPos.y > 0.01) {
         if (usePerlin) {
             vec2 windSample = vec2(worldPos.z * 0.15 + time * 0.4, worldPos.x * 0.15 + time * 0.25);
@@ -63,7 +63,9 @@ void main()
     // Bewege x-Position abhängig von sway
     vec4 localPos = vec4(aPos, 1.0);
     vec4 modelPos = model * localPos;
-    modelPos.x += sway; // Wende sway im Welt-Raum an
+
+    // HIER SWAY ANIMATION
+    modelPos.x += sway; 
 
     Normal = mat3(model) * aNormal;
     FragPos = vec3(model * vec4(aPos, 1.0));
