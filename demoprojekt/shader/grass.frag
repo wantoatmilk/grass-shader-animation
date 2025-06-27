@@ -18,11 +18,6 @@ void main()
     
     float t = clamp((vHeight - 0.6) / 0.4, 0.0, 1.0); //gradienten höhe
     float shadowRamp = smoothstep(0.0, 0.3, vHeight - 0.2);
-    /*
-    •	vHeight - 0.6 → verschiebt den Startpunkt des Übergangs (erst ab 0.6 beginnt es gelb zu werden)
-	•	/ 0.4 → bestimmt, wie schnell der Übergang erfolgt (von 0.6 bis 1.0)
-	•	clamp(..., 0.0, 1.0) → begrenzt den Wert auf den Bereich [0,1]
-    */
     
     vec3 bottomColor = vec3(redVariation, greenVariation, blueVariation); // unten: grünlich
     vec3 topColor = vec3(0.65, 0.7, 0.2); // oben: gelblich
@@ -58,5 +53,8 @@ void main()
 
     //basic ohne shader
     //gl_FragColor = vec4(0.1, 0.7, 0.1, 1.0); //grün
-    gl_FragColor = vec4(0.7, 0.7, 0.7, 1.0); //grau
+
+    //gl_FragColor = vec4(finalColor, 1.0);
+
+    //gl_FragColor = vec4(0.7, 0.7, 0.7, 1.0); //grau
 }
