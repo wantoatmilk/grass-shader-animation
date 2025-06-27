@@ -77,7 +77,7 @@ void Model::draw() const
     GLuint viewPosLoc = glGetUniformLocation(shaderProgram, "viewPos");
 
     // Beispielwerte (kannst du später dynamisch setzen)
-    glm::vec3 lightPos(3.0f, 3.0f, 3.0f);
+    glm::vec3 lightPos(-3.0f, 3.0f, 3.0f);
     glm::vec3 viewPos(0.0f, 0.0f, 5.0f); // Kamera von vorne
 
     glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
