@@ -57,5 +57,6 @@ void main()
     //gl_FragColor = vec4(litColor, 1.0);
 
     //basic ohne shader
-    gl_FragColor = vec4(0.1, 0.7, 0.1, 1.0);
+    //gl_FragColor = vec4(0.1, 0.7, 0.1, 1.0); //grün
+    gl_FragColor = vec4(0.7, 0.7, 0.7, 1.0); //grau
 }

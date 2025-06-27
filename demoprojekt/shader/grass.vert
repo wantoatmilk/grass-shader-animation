@@ -41,7 +41,7 @@ void main()
 
     vHeight = aPos.y; //y pos für gradient
 
-    float sway = 0.1;
+    float sway = 0.0;
     if (aPos.y > 0.01) {
         if (usePerlin) {
             vec2 windSample = vec2(worldPos.z * 0.15 + time * 0.4, worldPos.x * 0.15 + time * 0.25);
@@ -65,7 +65,7 @@ void main()
     vec4 modelPos = model * localPos;
 
     // HIER SWAY ANIMATION
-    modelPos.x += sway; 
+    //modelPos.x += sway; 
 
     Normal = mat3(model) * aNormal;
     FragPos = vec3(model * vec4(aPos, 1.0));
