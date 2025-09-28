@@ -48,13 +48,16 @@ void main()
     //vec3 litColor = clamp((ambient + diffuse + specular) * finalColor, 0.0, 1.0);
     vec3 litColor = clamp((ambient + diffuse + specular) * finalColor * (0.7 + 0.3 * shadowRamp), 0.0, 1.0);
     
-    //mit shader
-    //gl_FragColor = vec4(litColor, 1.0);
 
-    //basic ohne shader
+    //demo
+    //1. einfacher farbshader:
+    gl_FragColor = vec4(0.7, 0.7, 0.7, 1.0); //grau
+
     //gl_FragColor = vec4(0.1, 0.7, 0.1, 1.0); //grün
 
+    //2. einfacher farbverlauf:
     //gl_FragColor = vec4(finalColor, 1.0);
 
-    gl_FragColor = vec4(0.7, 0.7, 0.7, 1.0); //grau
+    //ENDPRODUKT
+    //gl_FragColor = vec4(litColor, 1.0); 
 }

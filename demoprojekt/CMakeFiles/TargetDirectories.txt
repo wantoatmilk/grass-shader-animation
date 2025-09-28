@@ -1,0 +1,3 @@
+/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/CMakeFiles/grass.dir
+/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/CMakeFiles/edit_cache.dir
+/Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/CMakeFiles/rebuild_cache.dir

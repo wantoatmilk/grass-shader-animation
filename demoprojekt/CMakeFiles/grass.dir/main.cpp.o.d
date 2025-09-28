@@ -1,15 +1,7 @@
-CMakeFiles/demo.dir/Grass.cpp.o: \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Grass.cpp \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Grass.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gltypes.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdint.h \
+CMakeFiles/grass.dir/main.cpp.o: \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/main.cpp \
+  /opt/homebrew/include/GL/glew.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/abi.h \
@@ -17,6 +9,30 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/platform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/language.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/version \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_header_macro.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_ptrdiff_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_size_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_wchar_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_null.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_nullptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_max_align_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_offsetof.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/byte.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/byte.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/enable_if.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_integral.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/integral_constant.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_cv.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/max_align_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/nullptr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/ptrdiff_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/size_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdint \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdint.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h \
@@ -39,10 +55,16 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glext.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/version \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/ios.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/string.h \
@@ -53,7 +75,6 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/locale_base_api.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/support/apple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/support/bsd_like.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/size_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__std_mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mbstate_t.h \
@@ -65,7 +86,6 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/forward.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_reference.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/integral_constant.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_reference.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/clocale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/locale.h \
@@ -87,7 +107,6 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -155,18 +174,7 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctype_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_header_macro.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_ptrdiff_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_size_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_rsize_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_wchar_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_null.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_nullptr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_max_align_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_offsetof.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h \
@@ -188,16 +196,6 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_constant_evaluated.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__verbose_abort \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdint \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/byte.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/byte.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/enable_if.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_integral.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_cv.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/max_align_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/nullptr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/ptrdiff_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdlib \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_cv_quals.h \
@@ -799,6 +797,8 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Plane.h \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.h \
   /opt/homebrew/include/glm/glm.hpp \
   /opt/homebrew/include/glm/detail/_fixes.hpp \
   /opt/homebrew/include/glm/detail/setup.hpp \
@@ -987,7 +987,6 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /opt/homebrew/include/glm/vector_relational.hpp \
   /opt/homebrew/include/glm/integer.hpp \
   /opt/homebrew/include/glm/detail/func_integer.inl \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Cam.h \
   /opt/homebrew/include/glm/gtc/matrix_transform.hpp \
   /opt/homebrew/include/glm/gtc/../mat4x4.hpp \
   /opt/homebrew/include/glm/gtc/../vec2.hpp \
@@ -1012,144 +1011,7 @@ CMakeFiles/demo.dir/Grass.cpp.o: \
   /opt/homebrew/include/glm/gtc/../geometric.hpp \
   /opt/homebrew/include/glm/gtc/../trigonometric.hpp \
   /opt/homebrew/include/glm/gtc/../matrix.hpp \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Plane.h \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/ShaderLoader.h \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/PerlinNoise.hpp \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/numeric \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/accumulate.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/inner_product.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/iota.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/pstl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/reduce.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/execution \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/random \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/generate_canonical.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/binomial_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/cauchy_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/chi_squared_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/gamma_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/exponential_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/default_random_engine.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/linear_congruential_engine.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/is_seed_sequence.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/discard_block_engine.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/discrete_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/fisher_f_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/geometric_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/poisson_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/clamp_to_integral.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/normal_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/independent_bits_engine.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/knuth_b.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/shuffle_order_engine.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/lognormal_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/piecewise_constant_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/piecewise_linear_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/random_device.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/ranlux.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/subtract_with_carry_engine.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/seed_seq.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
-  /opt/homebrew/include/glm/gtc/type_ptr.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/quaternion.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../gtc/constants.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../gtc/matrix_transform.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_relational.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/qualifier.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_relational.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../vector_relational.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../common.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/type_float.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/setup.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_common.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/scalar_constants.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/../geometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/../exponential.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/../ext/vector_relational.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../trigonometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../exponential.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_common.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_float.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/type_quat.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../detail/type_mat3x3.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../detail/type_mat4x4.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../detail/type_vec3.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../detail/type_vec4.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../ext/vector_relational.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../ext/../vector_relational.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../gtc/constants.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../gtc/matrix_transform.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/type_quat.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../trigonometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../exponential.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_common.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_geometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_float_precision.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_double.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_double_precision.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_relational.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_geometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_trigonometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/scalar_constants.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_trigonometric.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_transform.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../geometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/quaternion_transform.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../detail/type_mat3x3.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../detail/type_mat4x4.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../detail/type_vec3.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../detail/type_vec4.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/quaternion.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../trigonometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../geometric.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../exponential.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/epsilon.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../detail/setup.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../detail/qualifier.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/epsilon.inl \
-  /opt/homebrew/include/glm/gtc/../gtc/../vector_relational.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../common.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/vec1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_bool1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../detail/type_vec1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_bool1_precision.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_float1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_float1_precision.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_double1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_double1_precision.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_int1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_int1_sized.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/vector_int1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/scalar_int_sized.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_uint1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/vector_uint1_sized.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/vector_uint1.hpp \
-  /opt/homebrew/include/glm/gtc/../gtc/../ext/../ext/scalar_uint_sized.hpp \
-  /opt/homebrew/include/glm/gtc/../mat2x2.hpp \
-  /opt/homebrew/include/glm/gtc/../mat2x3.hpp \
-  /opt/homebrew/include/glm/gtc/../mat2x4.hpp \
-  /opt/homebrew/include/glm/gtc/../mat3x2.hpp \
-  /opt/homebrew/include/glm/gtc/../mat3x3.hpp \
-  /opt/homebrew/include/glm/gtc/../mat3x4.hpp \
-  /opt/homebrew/include/glm/gtc/../mat4x2.hpp \
-  /opt/homebrew/include/glm/gtc/../mat4x3.hpp \
-  /opt/homebrew/include/glm/gtc/type_ptr.inl
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Grass.h \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Model.h \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/ModelLoader.h \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Hair.h

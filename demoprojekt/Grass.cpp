@@ -83,8 +83,24 @@ void Grass::setup()
 
     float planeSize = plane.getSize();
 
+    ///*
+    // Nur ein einzelner Halm in der Mitte für die Demo
+    float x = 0.0f;
+    float z = 0.0f;
+    float y = plane.getHeightAt(x, z);
+
+    GrassInstance instance;
+    instance.position = glm::vec3(x, y, z);
+    instance.scaleHeight = 1.0f;
+    instance.scaleWidth = 1.0f;
+    instance.rotationAngle = 0.0f;
+    instance.colorSeed = 0.5f;
+
+    instances.push_back(instance);
+    //*/
+
     /*
-    // für mehrere in der grid (mit dem randomize kriegt man die grid raus!)
+    // für mehrere in der grid
 
     int numHalme = 15;
     float spacing = planeSize / numHalme;
@@ -108,21 +124,30 @@ void Grass::setup()
     }
     */
 
-    ///*
-    // Nur ein einzelner Halm in der Mitte für die Demo
-    float x = 0.0f;
-    float z = 0.0f;
-    float y = plane.getHeightAt(x, z);
+    /*
+    //natürliches spacing
 
-    GrassInstance instance;
-    instance.position = glm::vec3(x, y, z);
-    instance.scaleHeight = 1.0f;
-    instance.scaleWidth = 1.0f;
-    instance.rotationAngle = 0.0f;
-    instance.colorSeed = 0.5f;
+     int numHalme = 15; // halmanzahl!
 
-    instances.push_back(instance);
-    //*/
+     for (int i = 0; i < numHalme; ++i)
+     {
+         for (int j = 0; j < numHalme; ++j)
+         {
+             float x = static_cast<float>(rand()) / RAND_MAX * planeSize - planeSize / 2.0f;
+             float z = static_cast<float>(rand()) / RAND_MAX * planeSize - planeSize / 2.0f;
+             float y = plane.getHeightAt(x, z);
+
+             GrassInstance instance;
+             instance.position = glm::vec3(x, y, z); // globale pos
+             instance.scaleHeight = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
+             instance.scaleWidth = 0.6f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / (1.2f - 0.6f)));
+             instance.rotationAngle = static_cast<float>(rand()) / (static_cast<float>(RAND_MAX)) * glm::radians(360.0f);
+             instance.colorSeed = static_cast<float>(rand()) / RAND_MAX;
+
+             instances.push_back(instance);
+         }
+     }
+     */
 }
 
 void Grass::draw() const

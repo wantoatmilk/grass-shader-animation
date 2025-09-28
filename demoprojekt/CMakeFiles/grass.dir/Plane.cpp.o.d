@@ -1,14 +1,14 @@
-CMakeFiles/demo.dir/Plane.cpp.o: \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Plane.cpp \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Plane.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \
+CMakeFiles/grass.dir/Plane.cpp.o: \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Plane.cpp \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Plane.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gltypes.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gltypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -39,9 +39,9 @@ CMakeFiles/demo.dir/Plane.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glext.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/Cam.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/Cam.h \
   /opt/homebrew/include/glm/glm.hpp \
   /opt/homebrew/include/glm/detail/_fixes.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cmath \
@@ -448,8 +448,8 @@ CMakeFiles/demo.dir/Plane.cpp.o: \
   /opt/homebrew/include/glm/gtc/../geometric.hpp \
   /opt/homebrew/include/glm/gtc/../trigonometric.hpp \
   /opt/homebrew/include/glm/gtc/../matrix.hpp \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/ShaderLoader.h \
-  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/demoprojekt/PerlinNoise.hpp \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/ShaderLoader.h \
+  /Users/jacquelinekohnlein/Desktop/grass-shader-animation/PerlinNoise.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \

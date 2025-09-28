@@ -64,7 +64,7 @@ void main()
     vec4 localPos = vec4(aPos, 1.0);
     vec4 modelPos = model * localPos;
 
-    // HIER SWAY ANIMATION
+    // HIER SWAY ANIMATION DEMO
     //modelPos.x += sway; 
 
     Normal = mat3(model) * aNormal;
